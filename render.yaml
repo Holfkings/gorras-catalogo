@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: gorras-catalogo
+    env: static
+    buildCommand: ""
+    startCommand: python -m http.server $PORT
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 8000
