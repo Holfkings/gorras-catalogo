@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Catálogo de gorras — Noche & Co." />
+  <title>Noche &amp; Co. — Catálogo de Gorras</title>
+
+  <!-- Tipografía: Space Grotesk (body/UI) + Fraunces (títulos con carácter) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header__inner">
+      <a href="#inicio" class="brand">
+        <svg class="brand__mark" viewBox="0 0 24 24" width="28" height="28">
+          <path fill="#e07b39" d="M12 2a10 10 0 0 0-8.8 17.1l4.7 4.7a1 1 0 0 0 1.4 0l4.7-4.7A10 10 0 1 0 12 2Zm4.5 10.5a.7.7 0 1 1 0 1.4.7.7 0 0 1 0-1.4Z" />
+          <circle cx="12" cy="7" r="1.3" fill="#18140f" />
+          <path fill="#e07b39" d="M9 14.5l2.5 2.5 3-3.1" />
+        </svg>
+        <span class="brand__name">Noche &amp; Co.</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero con profundidad ===== -->
+    <section id="inicio" class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+
+      <!-- capas de profundidad, densidades distintas -->
+      <div class="hero__layer hero__layer--far"></div>
+      <div class="hero__layer hero__layer--mid"></div>
+      <div class="hero__layer hero__layer--near"></div>
+
+      <div class="container hero__inner">
+        <p class="eyebrow">Nueva temporada</p>
+        <h1 class="hero__title">
+          Gorras que
+          <span class="serif">respiran</span>
+          <span class="serif">luz</span>
+        </h1>
+        <p class="hero__sub">
+          Catálogo de gorras deportivas y de estilo. <strong>Fotos en camino</strong> —
+          la estructura de la tienda ya está lista.
+        </p>
+        <div class="hero__actions">
+          <a href="#catalogo" class="btn btn--primary">Ver catálogo</a>
+          <a href="#contacto" class="btn btn--ghost">Pedir presupuesto</a>
+        </div>
+        <div class="hero__dev">
+          <span>Migas de texto y accesibilidad verificadas</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Catálogo ===== -->
+    <section id="catalogo" class="catalog">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow">Catálogo</p>
+          <h2 class="section__title">Gorras destacadas</h2>
+          <p class="section__desc">Elige tu par. Envío a nivel nacional.</p>
+        </header>
+
+        <div class="filters" role="group" aria-label="Filtrar por categoría">
+          <button class="filter is-active" data-filter="todas">Todas</button>
+          <button class="filter" data-filter="deportivas">Deportivas</button>
+          <button class="filter" data-filter="clásicas">Clásicas</button>
+        </div>
+
+        <div class="grid" id="grid">
+          <!-- El catálogo se pinta con JavaScript (barra de filtros + reveal). -->
+        </div>
+
+        <p class="catalog__empty" id="empty" hidden>No hay gorras en esta categoría.</p>
+      </div>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section id="contacto" class="contact">
+      <div class="container">
+        <div class="contact__inner">
+          <div class="contact__copy">
+            <p class="eyebrow">Habla con nosotros</p>
+            <h2 class="section__title">Planeá tu pedido</h2>
+            <p class="section__desc">
+              Necesitás un catálogo personalizado, márgenes o un envío distinto?
+              Decantemos un momento.
+            </p>
+            <div class="contact__meta">
+              <div><strong class="serif">Envío</strong><span class="muted">Nivel nacional</span></div>
+              <div><strong class="serif">Garantía</strong><span class="muted">90 días</span></div>
+              <div><strong class="serif">Devolución</strong><span class="muted">Gratis dentro de 15 días</span></div>
+            </div>
+          </div>
+          <form class="contact__form" id="contact-form" novalidate>
+            <input name="name" type="text" placeholder="Tu nombre" autocomplete="name" required />
+            <input name="email" type="email" placeholder="tu@email.com" autocomplete="email" required />
+            <select name="category" aria-label="Categoría de interés">
+              <option value="">Categoría de interés</option>
+              <option value="deportivas">Deportivas</option>
+              <option value="clásicas">Clásicas</option>
+            </select>
+            <textarea name="message" rows="4" placeholder="¿Qué te interesó?" required></textarea>
+            <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+            <p class="form__status" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <p>&copy; <span id="year"></span> Noche &amp; Co. — Diseño aplicado, fotos en camino.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

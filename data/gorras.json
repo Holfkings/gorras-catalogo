@@ -1,0 +1,62 @@
+[
+  {
+    "id": "g01",
+    "cat": "deportivas",
+    "name": "Gorra Ventedana",
+    "color": "Noche",
+    "price": "45.000",
+    "note": "Abertura total, visor ajustable",
+    "img": "img/g01.jpg",
+    "sale": false
+  },
+  {
+    "id": "g02",
+    "cat": "clásicas",
+    "name": "Gorra Clásica",
+    "color": "Terracota",
+    "price": "42.000",
+    "note": "Lienzo y empuñadura en cuero",
+    "img": "img/g02.jpg",
+    "sale": false
+  },
+  {
+    "id": "g03",
+    "cat": "deportivas",
+    "name": "Gorra Acolchada",
+    "color": "Oliva",
+    "price": "48.000",
+    "note": "Con visor y alicates aisladores",
+    "img": "img/g03.jpg",
+    "sale": true
+  },
+  {
+    "id": "g04",
+    "cat": "clásicas",
+    "name": "Gorra Estrape",
+    "color": "Café",
+    "price": "38.000",
+    "note": "Sin visor, diseño minimalista",
+    "img": "img/g04.jpg",
+    "sale": false
+  },
+  {
+    "id": "g05",
+    "cat": "deportivas",
+    "name": "Gorra Runner",
+    "color": "Roja",
+    "price": "35.000",
+    "note": "Ligera, para entrenamiento",
+    "img": "img/g05.jpg",
+    "sale": false
+  },
+  {
+    "id": "g06",
+    "cat": "clásicas",
+    "name": "Gorra Báscula",
+    "color": "Beige",
+    "price": "43.000",
+    "note": "Modelo formal, para eventos",
+    "img": "img/g06.jpg",
+    "sale": false
+  }
+]
